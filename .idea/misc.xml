@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/android/MedicalHelper/app/src/main/res/drawable/side_nav_bar.xml" value="0.26614583333333336" />
+        <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/activity_about_app.xml" value="0.4" />
+        <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/activity_medicine_profile.xml" value="0.264" />
+        <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/activity_navigation.xml" value="0.25" />
+        <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/activity_new_medicine_regstier.xml" value="0.15789473684210525" />
+        <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/activity_reminder.xml" value="0.2" />
+        <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/content_navigation.xml" value="0.25" />
+        <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/fragment_gallery.xml" value="0.25" />
+        <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/fragment_slideshow.xml" value="0.1" />
+        <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/medicine_card.xml" value="0.25" />
+        <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/nav_header_navigation.xml" value="0.25" />
+        <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/settings_activity.xml" value="0.2259963768115942" />
+        <entry key="..\:/android/MedicalHelper/app/src/main/res/menu/activity_main_drawer.xml" value="0.25" />
+        <entry key="..\:/android/MedicalHelper/app/src/main/res/menu/added.xml" value="0.25" />
+        <entry key="..\:/android/MedicalHelper/app/src/main/res/menu/navigation.xml" value="0.25" />
+        <entry key="..\:/android/MedicalHelper/app/src/main/res/xml/root_preferences.xml" value="0.2259963768115942" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

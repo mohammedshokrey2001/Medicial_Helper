@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back2"
+
+
+    tools:context=".NewMedicine_Appoinment.NewMedicineRegstier">
+
+    <ImageView
+        android:id="@+id/imageView_register"
+        android:layout_width="411dp"
+        android:layout_height="198dp"
+        android:src="@drawable/care"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <Spinner
+        android:id="@+id/spinner_time_for_medcine"
+        android:layout_width="254dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="63dp"
+        android:minHeight="48dp"
+        android:stateListAnimator="@android:anim/accelerate_interpolator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_register"
+        tools:listitem="@android:layout/list_content" />
+
+    <EditText
+        android:id="@+id/doctor_name_edit_text"
+        android:layout_width="278dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="65dp"
+        android:ems="10"
+        android:hint="medicine name"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_time_for_medcine"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/notes_appionitment_s_edit_text"
+        android:layout_width="284dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="59dp"
+        android:ems="10"
+        android:hint="daily doeses"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/doctor_name_edit_text"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine_for_notes_addead"
+        android:layout_width="290dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="53dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="notes"
+        android:inputType="textMultiLine"
+        android:shadowColor="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notes_appionitment_s_edit_text" />
+
+    <Button
+        android:id="@+id/add_new_appointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="168dp"
+        android:text="ADD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine_for_notes_addead" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_register"
+        app:srcCompat="@drawable/ic_menu_camera" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

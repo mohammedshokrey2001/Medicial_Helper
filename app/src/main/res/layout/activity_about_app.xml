@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="how to add medcine to medicine table"
+                android:textSize="20sp" />
+
+            <VideoView
+                android:id="@+id/videoView_addMedcine"
+                android:layout_width="match_parent"
+                android:layout_height="422dp" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="how to create Reminder"
+                android:textSize="20sp" />
+
+            <VideoView
+                android:id="@+id/videoView_addReminder"
+                android:layout_width="match_parent"
+                android:layout_height="422dp" />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="how to add dr appoinmment reminder"
+                android:textSize="20sp" />
+
+            <VideoView
+                android:id="@+id/videoView_addappoinment"
+                android:layout_width="match_parent"
+                android:layout_height="422dp" />
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="how to see medical tips"
+                android:textSize="20sp" />
+
+            <VideoView
+                android:id="@+id/videoView_seeMedicalTips"
+                android:layout_width="match_parent"
+                android:layout_height="422dp" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
+
