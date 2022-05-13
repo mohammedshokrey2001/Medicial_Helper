@@ -23,6 +23,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.medicalhelper.R;
 import com.example.medicalhelper.dataModels.DataModelMedicine;
 import com.example.medicalhelper.databinding.FragmentSlideshowBinding;
+import com.example.medicalhelper.profiles.Diabtes_tips;
 
 import java.util.ArrayList;
 
@@ -57,7 +58,7 @@ public class SlideshowFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getContext(), "diabetes tips  ", Toast.LENGTH_LONG).show();
-                //  startActivity(new Intent(getContext(),));
+                  startActivity(new Intent(getContext(), Diabtes_tips.class));
             }
         });
 
