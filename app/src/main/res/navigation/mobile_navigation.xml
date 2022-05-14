@@ -22,4 +22,9 @@
         android:name="com.example.medicalhelper.MAIN.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/doctorsFragment"
+        android:name="com.example.medicalhelper.MAIN.ui.DoctorsFragment"
+        android:label="fragment_doctors"
+        tools:layout="@layout/fragment_doctors" />
 </navigation>

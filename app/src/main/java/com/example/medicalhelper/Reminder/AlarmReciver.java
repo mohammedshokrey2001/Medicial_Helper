@@ -4,6 +4,7 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.provider.Settings;
 
 import androidx.core.app.NotificationCompat;
@@ -25,14 +26,14 @@ public class AlarmReciver extends BroadcastReceiver {
                 .setContentTitle("Alarm for Medicine")
                 .setAutoCancel(true)
                 .setDefaults(NotificationCompat.DEFAULT_ALL)
-                .setSound(Settings.System.DEFAULT_RINGTONE_URI)
+                .setSound(Settings.System.DEFAULT_ALARM_ALERT_URI)
                 .setContentIntent(pendingIntent)
                 .setPriority(NotificationCompat.PRIORITY_HIGH);
         int random_int = (int)Math.floor(Math.random()*(1000-120+1)+120);
 
-
         NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(context);
         notificationManagerCompat.notify(random_int,builder.build());
+
 
 
     }

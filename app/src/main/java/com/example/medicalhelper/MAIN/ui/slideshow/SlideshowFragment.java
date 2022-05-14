@@ -4,28 +4,21 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.SearchView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.medicalhelper.R;
-import com.example.medicalhelper.dataModels.DataModelMedicine;
+import com.example.medicalhelper.dataManger.MangerTips;
 import com.example.medicalhelper.databinding.FragmentSlideshowBinding;
-import com.example.medicalhelper.profiles.Diabtes_tips;
-
-import java.util.ArrayList;
+import com.example.medicalhelper.json_wo.Json_Data_Internet;
+import com.example.medicalhelper.profiles.Profile_tips;
 
 public class SlideshowFragment extends Fragment {
 
@@ -53,12 +46,20 @@ public class SlideshowFragment extends Fragment {
         pressure = root.findViewById(R.id.Card_Pressure_disease_tips);
 
 
-        hasOptionsMenu();
+
+
+
+
+        Intent intent = new Intent(getContext() ,Profile_tips.class);
         diabetes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getContext(), "diabetes tips  ", Toast.LENGTH_LONG).show();
-                  startActivity(new Intent(getContext(), Diabtes_tips.class));
+
+
+                  intent.putExtra("TIPS_DATA", MangerTips.dataDiabtes());
+                  startActivity(intent);
+
             }
         });
 
@@ -66,7 +67,8 @@ public class SlideshowFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getContext(), "healthy life tips  ", Toast.LENGTH_LONG).show();
-                //  startActivity(new Intent(getContext(),));
+                intent.putExtra("TIPS_DATA", MangerTips.dataHealth());
+                startActivity(intent);
             }
         });
 
@@ -75,7 +77,11 @@ public class SlideshowFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getContext(), "pressure tips  ", Toast.LENGTH_LONG).show();
-                //  startActivity(new Intent(getContext(),));
+                intent.putExtra("TIPS_DATA", MangerTips.dataPresserue());
+
+                Json_Data_Internet.NotifyDa();
+
+                startActivity(intent);
             }
         });
 
@@ -84,7 +90,8 @@ public class SlideshowFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getContext(), "covid-19 tips  ", Toast.LENGTH_LONG).show();
-                //  startActivity(new Intent(getContext(),));
+                intent.putExtra("TIPS_DATA", MangerTips.dataCovid());
+                startActivity(intent);
             }
         });
 

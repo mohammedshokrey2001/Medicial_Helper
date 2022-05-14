@@ -9,6 +9,7 @@ import android.view.MenuItem;
 
 import com.example.medicalhelper.MAIN.NavigationS;
 import com.example.medicalhelper.R;
+import com.example.medicalhelper.Reminder.Doctor_Appoinment;
 import com.example.medicalhelper.Reminder.ReminderS;
 import com.example.medicalhelper.menuT.AboutApp;
 import com.example.medicalhelper.menuT.SettingsActivity;
@@ -57,8 +58,18 @@ public  final  class Menu {
         else if (id == R.id.About_App){
             aboutApp(context);
         }
+        else if (id == R.id.add_appoinment){
+            addAppoint(context);
+        }
 
 
+    }
+
+    private static void addAppoint(Context context) {
+        mContext = context;
+        Intent i = new Intent(mContext, Doctor_Appoinment.class);
+        i.addFlags(FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(i);
     }
 
     private static void reminder(Context context) {

@@ -5,8 +5,13 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Switch;
 
+import com.example.medicalhelper.MAIN.ui.gallery.GalleryFragment;
+import com.example.medicalhelper.MAIN.ui.home.HomeFragment;
+import com.example.medicalhelper.MAIN.ui.slideshow.SlideshowFragment;
 import com.example.medicalhelper.NewMedicine_Appoinment.NewMedicineRegstier;
+import com.example.medicalhelper.databinding.ActivityNavigationBinding;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
@@ -15,13 +20,14 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import com.example.medicalhelper.R;
-import com.example.medicalhelper.databinding.ActivityNavigationBinding;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-public class NavigationS extends AppCompatActivity {
+public class NavigationS extends
+        AppCompatActivity
+        {
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -52,8 +58,6 @@ public class NavigationS extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_navigation);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-
-
     }
 
     @Override
@@ -73,10 +77,14 @@ public class NavigationS extends AppCompatActivity {
 
 
 
+
+
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_navigation);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
 }
