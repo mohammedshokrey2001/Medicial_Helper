@@ -1,4 +1,4 @@
-package com.example.medicalhelper.Reminder;
+package com.example.medicalhelper.NewMedicine_Appoinment;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;

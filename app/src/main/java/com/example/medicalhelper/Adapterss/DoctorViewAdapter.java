@@ -1,4 +1,4 @@
-package com.example.medicalhelper.helper.Adapterss;
+package com.example.medicalhelper.Adapterss;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -59,7 +59,7 @@ public class DoctorViewAdapter extends RecyclerView.Adapter<DoctorViewAdapter.My
 
         public MyViewHolder( View itemView) {
             super(itemView);
-            name = itemView.findViewById(R.id.doctorNmaeEditText);
+            name = itemView.findViewById(R.id.t1);
             city = itemView.findViewById(R.id.city_data_doctors);
             //img  = itemView.findViewById(R.id.doctorNameIMG);
 

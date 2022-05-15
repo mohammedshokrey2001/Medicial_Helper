@@ -14,7 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.medicalhelper.R;
-import com.example.medicalhelper.helper.Adapterss.MedicalTipsViewAdapter;
+import com.example.medicalhelper.Adapterss.MedicalTipsViewAdapter;
 
 import java.util.ArrayList;
 

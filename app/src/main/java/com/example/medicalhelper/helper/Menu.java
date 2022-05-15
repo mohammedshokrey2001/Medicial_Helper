@@ -7,12 +7,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.MenuItem;
 
+import com.example.medicalhelper.AboutApp.AboutApp_updated;
 import com.example.medicalhelper.MAIN.NavigationS;
 import com.example.medicalhelper.R;
-import com.example.medicalhelper.Reminder.Doctor_Appoinment;
+import com.example.medicalhelper.NewMedicine_Appoinment.Doctor_Appoinment;
 import com.example.medicalhelper.Reminder.ReminderS;
-import com.example.medicalhelper.menuT.AboutApp;
-import com.example.medicalhelper.menuT.SettingsActivity;
 
 
 public  final  class Menu {
@@ -28,21 +27,12 @@ public  final  class Menu {
 
          public final static void aboutApp(Context context){
              mContext = context;
-             Intent i = new Intent(mContext, AboutApp.class);
+             Intent i = new Intent(mContext, AboutApp_updated.class);
              i.addFlags(FLAG_ACTIVITY_NEW_TASK);
              context.startActivity(i);
          }
 
 
-
-    public final static void setting(Context context){
-        mContext = context;
-        Intent i = new Intent(mContext, SettingsActivity.class);
-        i.addFlags(FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(i);
-
-
-    }
 
 
     public final static void menuSelection(MenuItem item ,Context context){

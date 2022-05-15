@@ -1,6 +1,7 @@
 package com.example.medicalhelper.MAIN.ui.gallery;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -9,11 +10,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.SearchView;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -27,8 +25,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.medicalhelper.R;
 import com.example.medicalhelper.dataModels.dataModelDoctors;
 import com.example.medicalhelper.databinding.FragmentGalleryBinding;
-import com.example.medicalhelper.helper.Adapterss.DoctorViewAdapter;
+import com.example.medicalhelper.Adapterss.DoctorViewAdapter;
 import com.example.medicalhelper.json_wo.Json_Data_Internet;
+import com.example.medicalhelper.profiles.Doctor_Profile;
 
 import java.util.ArrayList;
 
@@ -169,7 +168,14 @@ public class GalleryFragment extends Fragment {
             @Override
             public void onClick(View v, int position) {
                 Log.i("D", "onClick: sd");
+                Intent sd = new Intent(getContext(), Doctor_Profile.class);
+
+                sd.putExtra("Data_Doctor",all_doctors.get(position));
+                startActivity(sd);
             }
+
+
+
         };
 
     }

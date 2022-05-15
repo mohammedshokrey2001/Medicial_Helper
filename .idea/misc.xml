@@ -7,6 +7,7 @@
         <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/activity_about_app.xml" value="0.1" />
         <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/activity_diabtes_tips.xml" value="0.20878623188405798" />
         <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/activity_doctor_appoinment.xml" value="0.18432971014492755" />
+        <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/activity_doctor_profile.xml" value="0.264" />
         <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/activity_medicine_profile.xml" value="0.264" />
         <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/activity_navigation.xml" value="0.25" />
@@ -16,10 +17,14 @@
         <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/content_navigation.xml" value="0.25" />
         <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/doctor_card.xml" value="0.4" />
         <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/doctors_fragment.xml" value="0.16614583333333333" />
+        <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/fragment_about.xml" value="0.25" />
+        <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/fragment_about_app_updated.xml" value="0.17346014492753623" />
+        <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/fragment_devolper.xml" value="0.264" />
         <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/fragment_doctors.xml" value="0.14375" />
         <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/fragment_gallery.xml" value="0.25" />
+        <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/fragment_guide.xml" value="0.264" />
         <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/fragment_home.xml" value="0.25" />
-        <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/fragment_slideshow.xml" value="0.1" />
+        <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/fragment_slideshow.xml" value="0.4" />
         <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/medicine_card.xml" value="0.25" />
         <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/nav_header_navigation.xml" value="0.25" />
         <entry key="..\:/android/MedicalHelper/app/src/main/res/layout/settings_activity.xml" value="0.2259963768115942" />

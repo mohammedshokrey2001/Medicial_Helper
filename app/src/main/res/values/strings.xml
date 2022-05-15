@@ -30,6 +30,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="doctors">Doctors</string>
-
-
+    <string name="title_activity_about_app_updated">AboutApp_updated</string>
+    <string name="tab_text_1">About App</string>
+    <string name="tab_text_2">User Guide</string>
+    <string name="tab_text_3">About Developer</string>
 </resources>

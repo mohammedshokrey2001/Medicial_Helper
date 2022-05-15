@@ -1,4 +1,4 @@
-package com.example.medicalhelper.helper.Adapterss;
+package com.example.medicalhelper.Adapterss;
 
 import android.graphics.Bitmap;
 import android.view.LayoutInflater;
@@ -58,7 +58,7 @@ public class MedicineViewAdapter extends RecyclerView.Adapter<MedicineViewAdapte
 
         public MyViewHolder( View itemView) {
             super(itemView);
-            name = itemView.findViewById(R.id.doctorNmaeEditText);
+            name = itemView.findViewById(R.id.t1);
             img  = itemView.findViewById(R.id.doctorNameIMG);
 
 

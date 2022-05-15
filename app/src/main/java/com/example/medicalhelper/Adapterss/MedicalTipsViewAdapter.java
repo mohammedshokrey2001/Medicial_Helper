@@ -1,4 +1,4 @@
-package com.example.medicalhelper.helper.Adapterss;
+package com.example.medicalhelper.Adapterss;
 
 import android.view.LayoutInflater;
 import android.view.View;

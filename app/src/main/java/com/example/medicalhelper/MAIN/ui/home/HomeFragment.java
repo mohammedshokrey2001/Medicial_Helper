@@ -23,7 +23,7 @@ import com.example.medicalhelper.R;
 import com.example.medicalhelper.dataModels.DataModelMedicine;
 import com.example.medicalhelper.databinding.FragmentHomeBinding;
 import com.example.medicalhelper.helper.DBHelper;
-import com.example.medicalhelper.helper.Adapterss.MedicineViewAdapter;
+import com.example.medicalhelper.Adapterss.MedicineViewAdapter;
 import com.example.medicalhelper.profiles.medicine_Profile;
 
 import java.util.ArrayList;

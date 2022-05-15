@@ -7,7 +7,7 @@
     android:background="@drawable/back2"
 
 
-    tools:context=".Reminder.Doctor_Appoinment">
+    tools:context=".NewMedicine_Appoinment.Doctor_Appoinment">
 
     <ImageView
         android:id="@+id/imageView_register"

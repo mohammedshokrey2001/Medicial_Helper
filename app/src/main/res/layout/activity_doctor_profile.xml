@@ -1,9 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".profiles.Doctor_Profile">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="View Profile Information"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="526dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_image"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColorHint="#808080"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.7">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:src="@drawable/doctor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_first_name"
+                android:layout_width="346dp"
+                android:layout_height="71dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="32dp"
+                android:textColorHint="#808080"
+                app:helperText="Name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_image"
+                app:layout_constraintWidth_percent="0.7">
+
+                <TextView
+                    android:id="@+id/doctor_name_doctor_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Handy"
+                    android:textColor="#000000"
+                    android:textColorHint="#808080"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Address_doctor_profile"
+                android:layout_width="347dp"
+                android:layout_height="76dp"
+                android:layout_marginTop="24dp"
+                android:textColorHint="#808080"
+                app:helperText="Address"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_first_name"
+                app:layout_constraintWidth_percent="0.7">
+
+                <TextView
+                    android:id="@+id/doctor_address_doctor_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:gravity="center"
+                    android:inputType="textEmailAddress"
+                    android:minHeight="48dp"
+                    android:padding="10dp"
+                    android:text="handyopinion@gmail.com"
+                    android:textColor="#000000"
+                    android:textColorHint="#808080"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/city_doctor_profle22"
+                android:layout_width="347dp"
+                android:layout_height="68dp"
+                android:layout_marginTop="24dp"
+                android:textColorHint="#808080"
+                app:helperText="City "
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Address_doctor_profile"
+                app:layout_constraintWidth_percent="0.7">
+
+                <TextView
+                    android:id="@+id/city_doctor_profle224"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:gravity="center"
+                    android:inputType="phone"
+                    android:minHeight="48dp"
+                    android:padding="10dp"
+                    android:text="0300 1234567"
+                    android:textColor="#000000"
+                    android:textColorHint="#808080"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_first_balance"
+                android:layout_width="371dp"
+                android:layout_height="357dp"
+                android:layout_marginTop="24dp"
+                android:baselineAligned="true"
+                android:textColorHint="#808080"
+                app:helperText="Describtion"
+                app:helperTextEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/city_doctor_profle22"
+                app:layout_constraintWidth_percent="0.7">
+
+                <TextView
+
+                    android:overScrollMode="always"
+
+                    android:singleLine="false"
+                    android:id="@+id/describtion_data_doctor_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp"
+                    android:background="#00000000"
+                    android:breakStrategy="balanced"
+                    android:gravity="center"
+                    android:inputType="textMultiLine"
+                    android:lines="20"
+                    android:maxLines="20"
+                    android:minHeight="48dp"
+                    android:minLines="12"
+                    android:padding="10dp"
+                    android:text="0.0"
+                    android:textColor="#000000"
+                    android:textColorHint="#808080"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>

@@ -16,10 +16,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MedicalHelper">
         <activity
+            android:name=".AboutApp.AboutApp_updated"
+            android:exported="true"
+            android:label="@string/title_activity_about_app_updated"
+            android:theme="@style/Theme.MedicalHelper.NoActionBar" />
+        <activity
             android:name=".profiles.Doctor_Profile"
             android:exported="true" />
         <activity
-            android:name=".Reminder.Doctor_Appoinment"
+            android:name=".NewMedicine_Appoinment.Doctor_Appoinment"
             android:exported="true" />
         <activity
             android:name=".profiles.Profile_tips"
