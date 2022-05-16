@@ -6,7 +6,9 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/care"
@@ -40,9 +42,7 @@
             android:exported="true"
             android:label="@string/title_activity_navigation"
             android:theme="@style/Theme.MedicalHelper.NoActionBar" />
-        <activity
-            android:name=".menuT.AboutApp"
-            android:exported="true" />
+
         <activity
             android:name=".Reminder.ReminderS"
             android:exported="true" />

@@ -1,6 +1,11 @@
 package com.example.medicalhelper.MAIN;
 
+import static androidx.core.content.ContextCompat.getSystemService;
+
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -39,13 +44,8 @@ public class NavigationS extends
         ActivityNavigationBinding binding = ActivityNavigationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         setSupportActionBar(binding.appBarNavigation.toolbar);
-        binding.appBarNavigation.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), NewMedicineRegstier.class);
-                 startActivity(intent);
-            }
-        });
+        binding.appBarNavigation.fab.setVisibility(View.INVISIBLE);
+
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each

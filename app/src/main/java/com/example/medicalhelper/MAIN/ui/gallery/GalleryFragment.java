@@ -1,7 +1,14 @@
 package com.example.medicalhelper.MAIN.ui.gallery;
 
+
+import static androidx.core.content.ContextCompat.getSystemService;
+import static androidx.core.content.ContextCompat.getSystemServiceName;
+
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -26,6 +33,7 @@ import com.example.medicalhelper.R;
 import com.example.medicalhelper.dataModels.dataModelDoctors;
 import com.example.medicalhelper.databinding.FragmentGalleryBinding;
 import com.example.medicalhelper.Adapterss.DoctorViewAdapter;
+import com.example.medicalhelper.helper.internetC;
 import com.example.medicalhelper.json_wo.Json_Data_Internet;
 import com.example.medicalhelper.profiles.Doctor_Profile;
 
@@ -57,11 +65,27 @@ public class GalleryFragment extends Fragment {
 
 
         Toast.makeText(getContext(), "you should have a connection to " +
-                "the internet to use this feature !! if you dont have internet connection please don't " +
-                "use this feature", Toast.LENGTH_SHORT).show();
+                "the internet to use this feature !! ", Toast.LENGTH_LONG).show();
+
+        Toast.makeText(getContext(), "if you dont have internet connection please don't " +
+                "\n"+ "use this feature ",Toast.LENGTH_LONG ).show();
 
 
         setHasOptionsMenu(true);
+
+
+        Log.i("internet connection", "onCreateView: " +   internetC.checkInternetConnection(getContext()));
+
+
+
+
+        if ( !internetC.checkInternetConnection(getContext())){
+            mImageButton.setVisibility(View.INVISIBLE);
+        }
+
+
+
+
 
            mImageButton.setOnClickListener(new View.OnClickListener() {
                @Override
@@ -137,13 +161,6 @@ public class GalleryFragment extends Fragment {
 
     }
 
-
-
-
-
-
-
-
     void adapter(){
         setOnClickListener();
 
@@ -151,14 +168,7 @@ public class GalleryFragment extends Fragment {
         RecyclerView.LayoutManager layoutManager =  new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-
-        DividerItemDecoration dividerItemDecoration  = new DividerItemDecoration(recyclerView.getContext(),
-                DividerItemDecoration.VERTICAL);
-        recyclerView.addItemDecoration(dividerItemDecoration);
         recyclerView.setAdapter(mAdapter);
-
-
-
 
     }
 
@@ -181,18 +191,15 @@ public class GalleryFragment extends Fragment {
     }
 
 
-
-
-
-
-
-
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         com.example.medicalhelper.helper.Menu.menuSelection(item,getContext());
         return super.onOptionsItemSelected(item);
 
     }
+
+
+
 
 
 }

@@ -3,6 +3,7 @@ package com.example.medicalhelper.dataModels;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+
 public class dataModelDoctors implements Parcelable {
 
 

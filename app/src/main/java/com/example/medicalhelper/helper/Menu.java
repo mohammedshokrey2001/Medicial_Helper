@@ -19,7 +19,7 @@ public  final  class Menu {
          static Context mContext ;
          public final static  void mainw(Context context){
              Intent intent = new Intent( context, NavigationS.class)  ;
-             intent.setFlags(FLAG_ACTIVITY_NEW_TASK);
+             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP|FLAG_ACTIVITY_NEW_TASK);
 
              context.startActivity(intent);
          }
@@ -28,7 +28,8 @@ public  final  class Menu {
          public final static void aboutApp(Context context){
              mContext = context;
              Intent i = new Intent(mContext, AboutApp_updated.class);
-             i.addFlags(FLAG_ACTIVITY_NEW_TASK);
+             i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP|FLAG_ACTIVITY_NEW_TASK);
+
              context.startActivity(i);
          }
 
@@ -58,13 +59,13 @@ public  final  class Menu {
     private static void addAppoint(Context context) {
         mContext = context;
         Intent i = new Intent(mContext, Doctor_Appoinment.class);
-        i.addFlags(FLAG_ACTIVITY_NEW_TASK);
+        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP|FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(i);
     }
 
     private static void reminder(Context context) {
         Intent intent = new Intent( context, ReminderS.class)  ;
-        intent.setFlags(FLAG_ACTIVITY_NEW_TASK);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP|FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
          }
 

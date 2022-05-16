@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 
@@ -153,7 +154,7 @@ public class DBHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
 
         int d =  db.delete( MED_TABLE,"id=? ",new String[]{String.valueOf(id)});
-
+        Log.i("DB", "deleteMedcine: "+d);
 
     }
 

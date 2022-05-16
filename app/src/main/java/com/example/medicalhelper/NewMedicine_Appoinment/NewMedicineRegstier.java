@@ -4,24 +4,21 @@ import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
+import com.example.medicalhelper.MAIN.ui.home.HomeFragment;
 import com.example.medicalhelper.helper.DBHelper;
 import com.example.medicalhelper.R;
 import com.example.medicalhelper.dataManger.manager1;
@@ -29,7 +26,6 @@ import com.example.medicalhelper.dataModels.DataModelMedicine;
 import com.example.medicalhelper.helper.SpinnerX;
 import com.example.medicalhelper.helper.WorkImage;
 
-import java.io.File;
 import java.util.ArrayList;
 
 public class NewMedicineRegstier extends AppCompatActivity {
@@ -40,12 +36,7 @@ public class NewMedicineRegstier extends AppCompatActivity {
         EditText notes;
         Button add_new_medicine;
         DBHelper mDBHelper ;
-        ImageView imgRegster;
-
-         private static final  int PICK_IMAGE = 1;
-         Uri imageVri;
-    private Bitmap mBitmap_for_insertion_DB;
-
+        ImageView imgRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,14 +49,19 @@ public class NewMedicineRegstier extends AppCompatActivity {
         notes = findViewById(R.id.editTextTextMultiLine_for_notes_addead);
         img   = findViewById(R.id.imageButton);
         add_new_medicine = findViewById(R.id.add_new_appointment);
-         imgRegster = findViewById(R.id.imageView_register);
+         imgRegister = findViewById(R.id.imageView_register);
+
 
         add_new_medicine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 addMedicine();
+                startActivity(new Intent(getApplicationContext(), HomeFragment.class));
+                Toast.makeText(getApplicationContext(), "medicine data added ", Toast.LENGTH_SHORT).show();
+
             }
         });
+
 
 
         img.setOnClickListener(new View.OnClickListener() {
@@ -87,8 +83,8 @@ public class NewMedicineRegstier extends AppCompatActivity {
 
     private void addMedicine() {
 
-        imgRegster.invalidate();
-        BitmapDrawable drawable = (BitmapDrawable) imgRegster.getDrawable();
+        imgRegister.invalidate();
+        BitmapDrawable drawable = (BitmapDrawable) imgRegister.getDrawable();
         Bitmap bitmap = drawable.getBitmap();
         byte [] imgg = WorkImage.prepareForDB(bitmap);
 
@@ -97,8 +93,8 @@ public class NewMedicineRegstier extends AppCompatActivity {
                 name.getText().toString(),
                 imgg,
                 notes.getText().toString(),
-               Integer.valueOf( mSpinner_hours_first.getSelectedItem().toString()),
-                Integer.valueOf(freq.getText().toString()));
+               Integer.parseInt( mSpinner_hours_first.getSelectedItem().toString()),
+                Integer.parseInt(freq.getText().toString()));
 
 
         mDBHelper.addMedicine(medicine);
@@ -114,41 +110,41 @@ public class NewMedicineRegstier extends AppCompatActivity {
 
 
 
-
-
-    private  void createFolder() {
-        if (isStoragePermissionGranted()) {
-            File folder = new File(Environment.getExternalStorageDirectory() + File.separator + "MedicineApp");
-
-            if (!folder.exists()) {
-                folder.mkdir();
-                Log.i("ssss", "createFolder: s");
-            }
-        }
-
-
-    }
-
-
-
-
-    public   boolean isStoragePermissionGranted() {
-
-            if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                    == PackageManager.PERMISSION_GRANTED) {
-                return true;
-            } else {
-                ActivityCompat.requestPermissions(this,
-                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
-                return false;
-            }
-
-
-        }
-
-
-
-
+///*
+//
+//    private  void createFolder() {
+//        if (isStoragePermissionGranted()) {
+//            File folder = new File(Environment.getExternalStorageDirectory() + File.separator + "MedicineApp");
+//
+//            if (!folder.exists()) {
+//                folder.mkdir();
+//                Log.i("ssss", "createFolder: s");
+//            }
+//        }
+//
+//
+//    }
+//
+//
+//
+//
+//    public   boolean isStoragePermissionGranted() {
+//
+//            if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+//                    == PackageManager.PERMISSION_GRANTED) {
+//                return true;
+//            } else {
+//                ActivityCompat.requestPermissions(this,
+//                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+//                return false;
+//            }
+//
+//
+//        }
+//
+//
+//
+//*/
 
 
         ActivityResultLauncher<String> mGetContent = registerForActivityResult(
@@ -157,7 +153,7 @@ public class NewMedicineRegstier extends AppCompatActivity {
                     @Override
                     public void onActivityResult(Uri result) {
                         if (result !=null){
-                            imgRegster.setImageURI(result);
+                            imgRegister.setImageURI(result);
 
                         }
                     }

@@ -13,10 +13,6 @@ import com.example.medicalhelper.AboutApp.DevolperFragment;
 import com.example.medicalhelper.AboutApp.GuideFragment;
 import com.example.medicalhelper.R;
 
-/**
- * A [FragmentPagerAdapter] that returns a fragment corresponding to
- * one of the sections/tabs/pages.
- */
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @StringRes
@@ -49,6 +45,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
                 fragment = new DevolperFragment();
                 break;
             }
+
 
         }
 

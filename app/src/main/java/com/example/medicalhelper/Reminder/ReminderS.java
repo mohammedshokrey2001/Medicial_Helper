@@ -9,7 +9,6 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.icu.number.IntegerWidth;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -79,7 +78,7 @@ public class ReminderS extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                setAlarm(calcTimeForReptaion());
+                setAlarm(calcTimeForReputation());
             }
         });
 
@@ -185,7 +184,7 @@ public class ReminderS extends AppCompatActivity {
     }
 
 
-    long calcTimeForReptaion(){
+    long calcTimeForReputation(){
          int time_min = ((Integer.parseInt( hours.getText().toString())*60) + Integer.parseInt( minute.getText().toString()));
          long TimeForReptaion = time_min * 60000;
               return  TimeForReptaion;

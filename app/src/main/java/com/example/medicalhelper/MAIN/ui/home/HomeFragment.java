@@ -19,12 +19,14 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.medicalhelper.NewMedicine_Appoinment.NewMedicineRegstier;
 import com.example.medicalhelper.R;
 import com.example.medicalhelper.dataModels.DataModelMedicine;
 import com.example.medicalhelper.databinding.FragmentHomeBinding;
 import com.example.medicalhelper.helper.DBHelper;
 import com.example.medicalhelper.Adapterss.MedicineViewAdapter;
 import com.example.medicalhelper.profiles.medicine_Profile;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
@@ -33,10 +35,11 @@ public class HomeFragment extends Fragment {
     private HomeViewModel homeViewModel;
     private FragmentHomeBinding binding;
     RecyclerView recyclerView;
-    ArrayList<DataModelMedicine> all_medcine;
+    ArrayList<DataModelMedicine> all_meidicine;
     private MedicineViewAdapter.RecycleViewListener listener;
     private MedicineViewAdapter mAdapter;
     private DBHelper mDb;
+    FloatingActionButton add_Medicine;
     private MenuItem menuItem;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -50,7 +53,18 @@ public class HomeFragment extends Fragment {
 
 
         recyclerView = root.findViewById(R.id.recyle_View_Medicine_Table_Tap);
+        add_Medicine = root.findViewById(R.id.floatingActionButton_add_medicine);
         setHasOptionsMenu(true);
+
+
+
+        add_Medicine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), NewMedicineRegstier.class));
+
+            }
+        });
 
 
 
@@ -67,15 +81,10 @@ public class HomeFragment extends Fragment {
 
     void adapter(){
         setOnClickListener();
-
-        mAdapter = new MedicineViewAdapter(all_medcine,listener);
+        mAdapter = new MedicineViewAdapter(all_meidicine,listener);
         RecyclerView.LayoutManager layoutManager =  new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-
-        DividerItemDecoration dividerItemDecoration  = new DividerItemDecoration(recyclerView.getContext(),
-                DividerItemDecoration.VERTICAL);
-        recyclerView.addItemDecoration(dividerItemDecoration);
         recyclerView.setAdapter(mAdapter);
 
 
@@ -88,7 +97,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v, int postion) {
                 Intent intent = new Intent(getContext(), medicine_Profile.class);
-                intent.putExtra("MedcineInfo",all_medcine.get(postion));
+                intent.putExtra("MedcineInfo", all_meidicine.get(postion));
                 startActivity(intent);
 
 
@@ -98,8 +107,8 @@ public class HomeFragment extends Fragment {
             @Override
             public boolean onLongClick(View v, int position) {
 
-                     mDb.deleteMedcine(all_medcine.get(position).getId());
-                         return true;
+                     mDb.deleteMedcine(all_meidicine.get(position).getId());
+                         return false;
             }
 
         };
@@ -115,13 +124,11 @@ public class HomeFragment extends Fragment {
     public void onResume() {
         super.onResume();
         mDb = new DBHelper(getContext());
-        all_medcine = (ArrayList<DataModelMedicine>) mDb.getAllMedicine();
+        all_meidicine = (ArrayList<DataModelMedicine>) mDb.getAllMedicine();
+
         adapter();
 
     }
-
-
-
 
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
@@ -133,18 +140,20 @@ public class HomeFragment extends Fragment {
         SearchView searchView = (SearchView) menuItem.getActionView();
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @SuppressLint("NotifyDataSetChanged")
             @Override
             public boolean onQueryTextSubmit(String s) {
-                all_medcine = (ArrayList<DataModelMedicine>) mDb.searchMedicine(s);
+                all_meidicine = (ArrayList<DataModelMedicine>) mDb.searchMedicine(s);
 
                 adapter();
-                return false;
+
+                 return false;
             }
 
+            @SuppressLint("NotifyDataSetChanged")
             @Override
             public boolean onQueryTextChange(String s) {
-                all_medcine = (ArrayList<DataModelMedicine>) mDb.searchMedicine(s);
-
+                all_meidicine = (ArrayList<DataModelMedicine>) mDb.searchMedicine(s);
                 adapter();
                 return false;
             }
