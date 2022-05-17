@@ -17,7 +17,7 @@ import com.example.medicalhelper.Reminder.ReminderS;
 public  final  class Menu {
 
          static Context mContext ;
-         public final static  void mainw(Context context){
+         public  static  void mainw(Context context){
              Intent intent = new Intent( context, NavigationS.class)  ;
              intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP|FLAG_ACTIVITY_NEW_TASK);
 
@@ -25,7 +25,7 @@ public  final  class Menu {
          }
 
 
-         public final static void aboutApp(Context context){
+         public  static void aboutApp(Context context){
              mContext = context;
              Intent i = new Intent(mContext, AboutApp_updated.class);
              i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP|FLAG_ACTIVITY_NEW_TASK);
@@ -36,7 +36,7 @@ public  final  class Menu {
 
 
 
-    public final static void menuSelection(MenuItem item ,Context context){
+    public  static void menuSelection(MenuItem item ,Context context){
        context = context;
         int id = item.getItemId();
         if (id== R.id.Main_W_menu_Item){

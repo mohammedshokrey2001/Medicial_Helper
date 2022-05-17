@@ -7,7 +7,7 @@
     android:background="@drawable/back2"
 
 
-    tools:context=".MAIN.ui.gallery.GalleryFragment">
+    tools:context=".MAIN.ui.Doctors.DoctorSFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycle_view_doctors_json"

@@ -21,27 +21,22 @@ import java.io.File;
 
 public final class WorkImage {
 
-
-       static Context mContext;
-
-
-    public final static Bitmap decodeImg(byte[] byteImage){
+    public  static Bitmap decodeImg(byte[] byteImage){
         return BitmapFactory.decodeByteArray(byteImage, 0, byteImage.length);
     }
 
-    public final static Bitmap decodeImg(Bitmap byteImage){
+    public  static Bitmap decodeImg(Bitmap byteImage){
             return  byteImage;
     }
 
 
 
-    public final static byte[] prepareForDB(Bitmap image){
+    public  static byte[] prepareForDB(Bitmap image){
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
 
         image.compress(Bitmap.CompressFormat.PNG, 100, stream);
 
-        byte[] byteArray = stream.toByteArray();
-        return  byteArray;
+        return stream.toByteArray();
 
     }
 

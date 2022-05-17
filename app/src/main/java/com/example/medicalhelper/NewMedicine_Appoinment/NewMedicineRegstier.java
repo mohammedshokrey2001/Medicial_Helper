@@ -21,7 +21,7 @@ import android.widget.Toast;
 import com.example.medicalhelper.MAIN.ui.home.HomeFragment;
 import com.example.medicalhelper.helper.DBHelper;
 import com.example.medicalhelper.R;
-import com.example.medicalhelper.dataManger.manager1;
+import com.example.medicalhelper.dataManger.ManagerSnnpier;
 import com.example.medicalhelper.dataModels.DataModelMedicine;
 import com.example.medicalhelper.helper.SpinnerX;
 import com.example.medicalhelper.helper.WorkImage;
@@ -72,7 +72,7 @@ public class NewMedicineRegstier extends AppCompatActivity {
         });
 
 
-        ArrayList<String> data = manager1.getHourtList();
+        ArrayList<String> data = ManagerSnnpier.getHourtList();
         data.add(0,"timing of first dose");
         SpinnerX.setSpinnerData(mSpinner_hours_first, data,this);
 

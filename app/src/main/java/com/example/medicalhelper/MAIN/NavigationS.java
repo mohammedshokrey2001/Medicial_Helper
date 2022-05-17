@@ -1,21 +1,10 @@
 package com.example.medicalhelper.MAIN;
 
-import static androidx.core.content.ContextCompat.getSystemService;
-
-import android.content.Context;
-import android.content.Intent;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
-import android.widget.Switch;
 
-import com.example.medicalhelper.MAIN.ui.gallery.GalleryFragment;
-import com.example.medicalhelper.MAIN.ui.home.HomeFragment;
-import com.example.medicalhelper.MAIN.ui.slideshow.SlideshowFragment;
-import com.example.medicalhelper.NewMedicine_Appoinment.NewMedicineRegstier;
 import com.example.medicalhelper.databinding.ActivityNavigationBinding;
 import com.google.android.material.navigation.NavigationView;
 

@@ -2,7 +2,7 @@ package com.example.medicalhelper.dataManger;
 
 import java.util.ArrayList;
 
-public final class  manager1 {
+public final class ManagerSnnpier {
 
 
 

@@ -1,14 +1,8 @@
-package com.example.medicalhelper.MAIN.ui.gallery;
+package com.example.medicalhelper.MAIN.ui.Doctors;
 
-
-import static androidx.core.content.ContextCompat.getSystemService;
-import static androidx.core.content.ContextCompat.getSystemServiceName;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -25,24 +19,23 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.medicalhelper.R;
 import com.example.medicalhelper.dataModels.dataModelDoctors;
-import com.example.medicalhelper.databinding.FragmentGalleryBinding;
+import com.example.medicalhelper.databinding.FragmentDoctorsDataJsonBinding;
 import com.example.medicalhelper.Adapterss.DoctorViewAdapter;
 import com.example.medicalhelper.helper.internetC;
-import com.example.medicalhelper.json_wo.Json_Data_Internet;
+import com.example.medicalhelper.helper.Json_Data_Internet;
 import com.example.medicalhelper.profiles.Doctor_Profile;
 
 import java.util.ArrayList;
 
-public class GalleryFragment extends Fragment {
+public class DoctorSFragment extends Fragment {
 
-    private GalleryViewModel galleryViewModel;
-    private FragmentGalleryBinding binding;
+    private DoctorSViewModel mDoctorSViewModel;
+    private FragmentDoctorsDataJsonBinding binding;
 
     RecyclerView recyclerView;
     ImageButton mImageButton;
@@ -54,11 +47,12 @@ public class GalleryFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        galleryViewModel =
-                new ViewModelProvider(this).get(GalleryViewModel.class);
+        mDoctorSViewModel =
+                new ViewModelProvider(this).get(DoctorSViewModel.class);
 
-        binding = FragmentGalleryBinding.inflate(inflater, container, false);
+        binding = FragmentDoctorsDataJsonBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+
         mImageButton = root.findViewById(R.id.imageButton2);
         recyclerView = root.findViewById(R.id.recycle_view_doctors_json);
         Json_Data_Internet.NotifyDa();
@@ -132,7 +126,8 @@ public class GalleryFragment extends Fragment {
                 all_doctors = (ArrayList<dataModelDoctors>) Json_Data_Internet.getCityDoctors(s);
 
                 if (all_doctors==null){
-                    Toast.makeText(getContext(), "please enter the city name correctly", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "please enter the city name correctly " +
+                            "Shibin ,Tanta ,cairo ", Toast.LENGTH_LONG).show();
 
                 }else {
                     adapter();
@@ -197,9 +192,6 @@ public class GalleryFragment extends Fragment {
         return super.onOptionsItemSelected(item);
 
     }
-
-
-
 
 
 }

@@ -1,4 +1,4 @@
-package com.example.medicalhelper.MAIN.ui.slideshow;
+package com.example.medicalhelper.MAIN.ui.tips;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -16,14 +16,14 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.medicalhelper.R;
 import com.example.medicalhelper.dataManger.MangerTips;
-import com.example.medicalhelper.databinding.FragmentSlideshowBinding;
-import com.example.medicalhelper.json_wo.Json_Data_Internet;
+import com.example.medicalhelper.databinding.FragmentTipsBinding;
+import com.example.medicalhelper.helper.Json_Data_Internet;
 import com.example.medicalhelper.profiles.Profile_tips;
 
-public class SlideshowFragment extends Fragment {
+public class TipsFragment extends Fragment {
 
-    private SlideshowViewModel slideshowViewModel;
-    private FragmentSlideshowBinding binding;
+    private TipsViewModel mTipsViewModel;
+    private FragmentTipsBinding binding;
 
     CardView diabetes;
     CardView health;
@@ -34,10 +34,10 @@ public class SlideshowFragment extends Fragment {
     @SuppressLint("RestrictedApi")
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        slideshowViewModel =
-                new ViewModelProvider(this).get(SlideshowViewModel.class);
+        mTipsViewModel =
+                new ViewModelProvider(this).get(TipsViewModel.class);
 
-        binding = FragmentSlideshowBinding.inflate(inflater, container, false);
+        binding = FragmentTipsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         diabetes = root.findViewById(R.id.Card_Diabtes_tips);

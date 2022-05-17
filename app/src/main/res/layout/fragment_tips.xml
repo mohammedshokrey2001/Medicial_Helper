@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/back2"
 
-    tools:context=".MAIN.ui.slideshow.SlideshowFragment">
+    tools:context=".MAIN.ui.tips.TipsFragment">
 
     <ScrollView
         android:layout_width="match_parent"

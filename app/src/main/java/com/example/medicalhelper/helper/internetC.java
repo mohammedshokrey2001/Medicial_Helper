@@ -4,8 +4,15 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+
 public final   class internetC {
-    public   static boolean checkInternetConnection(Context context){
+
+
+    public static boolean checkInternetConnection(@NonNull Context context){
+
+       @NonNull
         boolean connected = false;
         context.getApplicationContext();
         ConnectivityManager connectivityManager = (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);

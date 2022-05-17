@@ -11,9 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import com.example.medicalhelper.NewMedicine_Appoinment.OutDataToAlarm;
 import com.example.medicalhelper.R;
-import com.example.medicalhelper.dataManger.manager1;
+import com.example.medicalhelper.dataManger.ManagerSnnpier;
 import com.example.medicalhelper.helper.SpinnerX;
 
 public class Doctor_Appoinment extends AppCompatActivity {
@@ -32,8 +31,8 @@ public class Doctor_Appoinment extends AppCompatActivity {
         doctorName = findViewById(R.id.doctor_name_edit_text);
         notes = findViewById(R.id.notes_appionitment_s_edit_text);
         add_Apponitment = findViewById(R.id.add_new_appointment);
-        SpinnerX.setSpinnerData(mSnipperMin, manager1.getHourtList(),getApplicationContext());
-        SpinnerX.setSpinnerData(mSnipperHour, manager1.getMintList(),getApplicationContext());
+        SpinnerX.setSpinnerData(mSnipperMin, ManagerSnnpier.getHourtList(),getApplicationContext());
+        SpinnerX.setSpinnerData(mSnipperHour, ManagerSnnpier.getMintList(),getApplicationContext());
 
         add_Apponitment.setOnClickListener(new View.OnClickListener() {
             @Override

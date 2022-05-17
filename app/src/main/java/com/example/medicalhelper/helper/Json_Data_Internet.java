@@ -1,4 +1,4 @@
-package com.example.medicalhelper.json_wo;
+package com.example.medicalhelper.helper;
 
 import android.util.Log;
 
@@ -6,7 +6,6 @@ import androidx.annotation.NonNull;
 
 import com.example.medicalhelper.dataModels.dataModelDoctors;
 
-import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -40,7 +39,7 @@ public final class Json_Data_Internet {
              @Override
              public void onResponse(Call<List<dataModelDoctors>> call, Response<List<dataModelDoctors>> response) {
                  if (! response.isSuccessful()){
-                     Log.i("dataModelDoctors", "onSuccess: ++1");
+                     Log.i("dataModelDoctors_JSon", "onSuccess:--1");
                      return;
                  }
 
