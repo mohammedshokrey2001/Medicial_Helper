@@ -10,9 +10,7 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 
 import com.example.medicalhelper.dataModels.DataModelMedicine;
-import com.example.medicalhelper.helper.WorkImage;
 
-import java.sql.Blob;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,17 +20,15 @@ public class DBHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "mysqldb.db";
     private static final int DATABASE_VERISON = 1;
 
+
+    //table1
     public static final String MED_TABLE = "Med_TABLE";
     public static final String ID = "id";
     public static final String NAME = "NAME";
     public static final String NOTES = "NOTES";
-    public static final String MEDCCINE_IMG = "IMAGE";
+    public static final String MEDICINE_IMG = "IMAGE";
     public static final String FREQ = "Freq";
     public static final String STRING = "Start_Hour";
-
-
-
-
 
 
 
@@ -47,7 +43,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         String create_Statment = "Create Table " + MED_TABLE + " ( " + ID + "  INTEGER PRIMARY KEY AUTOINCREMENT,  "
                 + NAME + "  VARCHAR(40),  "
-                + MEDCCINE_IMG + " BLOB ,  " +
+                + MEDICINE_IMG + " BLOB ,  " +
                 FREQ + "  INTEGER (1)  , " +
                 NOTES + "  VARCHAR(150) , " +
                 STRING + " INTEGER(2) "+
@@ -68,7 +64,7 @@ public class DBHelper extends SQLiteOpenHelper {
          cv.put(FREQ,dataModel1.getFrequency());
          cv.put(NOTES,dataModel1.getNotes());
          cv.put(STRING,dataModel1.getsTime());
-        cv.put(MEDCCINE_IMG, dataModel1.medicineImg);
+        cv.put(MEDICINE_IMG, dataModel1.medicineImg);
 
         long insert = db.insert(MED_TABLE ,null,cv);
 
@@ -108,7 +104,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
         }else {
             /////
-
+            Log.i("DB", "getAllMedicine: --1 get data from Table "+MED_TABLE);
         }
         return  returnList;
     }
@@ -150,11 +146,11 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
 
-    public void deleteMedcine(int id){
+    public void deleteMedicine(int id){
         SQLiteDatabase db = getWritableDatabase();
 
         int d =  db.delete( MED_TABLE,"id=? ",new String[]{String.valueOf(id)});
-        Log.i("DB", "deleteMedcine: "+d);
+        Log.i("DB", "deleteMedicine: "+d);
 
     }
 

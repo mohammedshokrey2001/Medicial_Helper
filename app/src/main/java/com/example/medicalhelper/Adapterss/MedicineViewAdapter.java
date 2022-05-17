@@ -63,7 +63,7 @@ public class MedicineViewAdapter extends RecyclerView.Adapter<MedicineViewAdapte
 
 
             itemView.setOnClickListener(this);
-
+             itemView.setOnLongClickListener(this);
 
 
         }

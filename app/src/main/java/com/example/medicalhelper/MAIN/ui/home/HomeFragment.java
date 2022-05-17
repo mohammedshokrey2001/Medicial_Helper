@@ -3,6 +3,7 @@ package com.example.medicalhelper.MAIN.ui.home;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -15,7 +16,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -106,8 +106,8 @@ public class HomeFragment extends Fragment {
 
             @Override
             public boolean onLongClick(View v, int position) {
-
-                     mDb.deleteMedcine(all_meidicine.get(position).getId());
+                Log.i("Main Delete Medicine", "onLongClick: ++1");
+                     mDb.deleteMedicine(all_meidicine.get(position).getId());
                          return false;
             }
 
