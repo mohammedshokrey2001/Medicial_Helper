@@ -28,7 +28,7 @@ import com.example.medicalhelper.databinding.FragmentDoctorsDataJsonBinding;
 import com.example.medicalhelper.Adapterss.DoctorViewAdapter;
 import com.example.medicalhelper.helper.internetC;
 import com.example.medicalhelper.helper.Json_Data_Internet;
-import com.example.medicalhelper.profiles.Doctor_Profile;
+import com.example.medicalhelper.profiles.DoctorProfile;
 
 import java.util.ArrayList;
 
@@ -173,7 +173,7 @@ public class DoctorSFragment extends Fragment {
             @Override
             public void onClick(View v, int position) {
                 Log.i("D", "onClick: sd");
-                Intent sd = new Intent(getContext(), Doctor_Profile.class);
+                Intent sd = new Intent(getContext(), DoctorProfile.class);
 
                 sd.putExtra("Data_Doctor",all_doctors.get(position));
                 startActivity(sd);

@@ -18,7 +18,7 @@ import com.example.medicalhelper.R;
 import com.example.medicalhelper.dataManger.MangerTips;
 import com.example.medicalhelper.databinding.FragmentTipsBinding;
 import com.example.medicalhelper.helper.Json_Data_Internet;
-import com.example.medicalhelper.profiles.Profile_tips;
+import com.example.medicalhelper.profiles.TipsProfile;
 
 public class TipsFragment extends Fragment {
 
@@ -50,7 +50,8 @@ public class TipsFragment extends Fragment {
 
 
 
-        Intent intent = new Intent(getContext() ,Profile_tips.class);
+        Intent intent = new Intent(getContext() , TipsProfile.class);
+
         diabetes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

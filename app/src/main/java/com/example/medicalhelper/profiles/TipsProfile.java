@@ -18,7 +18,7 @@ import com.example.medicalhelper.Adapterss.MedicalTipsViewAdapter;
 
 import java.util.ArrayList;
 
-public class Profile_tips extends AppCompatActivity {
+public class TipsProfile extends AppCompatActivity {
 
 
     RecyclerView mRecyclerView ;
@@ -28,7 +28,7 @@ public class Profile_tips extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_diabtes_tips);
+        setContentView(R.layout.activity_general_tips);
 
       mRecyclerView = findViewById(R.id.recycle_view_tips_diabtes);
                          Intent intent = getIntent();

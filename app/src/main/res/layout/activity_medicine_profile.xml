@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back2"
-    tools:context=".profiles.medicine_Profile">
+    tools:context=".profiles.MedicineProfile">
 
     <ImageView
         android:id="@+id/medcine_profile_img_view"

@@ -1,5 +1,4 @@
 package com.example.medicalhelper.Adapterss;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,10 +13,13 @@ import com.example.medicalhelper.dataModels.dataModelDoctors;
 
 import java.util.ArrayList;
 
+
 public class DoctorViewAdapter extends RecyclerView.Adapter<DoctorViewAdapter.MyViewHolder> {
 
-    private ArrayList<dataModelDoctors> mDataModelDoctors;
-    private RecycleViewListener listener;
+    private final ArrayList<dataModelDoctors> mDataModelDoctors;
+
+    private final RecycleViewListener listener;
+
 
     @NonNull
     @Override
@@ -58,15 +60,14 @@ public class DoctorViewAdapter extends RecyclerView.Adapter<DoctorViewAdapter.My
 
 
         public MyViewHolder( View itemView) {
-            super(itemView);
-            name = itemView.findViewById(R.id.t1);
-            city = itemView.findViewById(R.id.city_data_doctors);
-            //img  = itemView.findViewById(R.id.doctorNameIMG);
 
+            super(itemView);
+
+            name = itemView.findViewById(R.id.t1);
+
+            city = itemView.findViewById(R.id.city_data_doctors);
 
             itemView.setOnClickListener(this);
-
-
 
         }
 
@@ -78,8 +79,6 @@ public class DoctorViewAdapter extends RecyclerView.Adapter<DoctorViewAdapter.My
 
 
     }
-
-
 
     public  interface RecycleViewListener{
         void onClick(View v , int position);

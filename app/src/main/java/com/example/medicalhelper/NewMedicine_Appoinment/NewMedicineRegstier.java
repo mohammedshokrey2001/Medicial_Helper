@@ -49,7 +49,7 @@ public class NewMedicineRegstier extends AppCompatActivity {
         notes = findViewById(R.id.editTextTextMultiLine_for_notes_addead);
         img   = findViewById(R.id.imageButton);
         add_new_medicine = findViewById(R.id.add_new_appointment);
-         imgRegister = findViewById(R.id.imageView_register);
+        imgRegister = findViewById(R.id.imageView_register);
 
 
         add_new_medicine.setOnClickListener(new View.OnClickListener() {

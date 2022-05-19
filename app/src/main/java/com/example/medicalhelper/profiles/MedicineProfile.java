@@ -24,7 +24,7 @@ import com.example.medicalhelper.dataModels.DataModelMedicine;
 
 import java.util.Locale;
 
-public class medicine_Profile extends AppCompatActivity {
+public class MedicineProfile extends AppCompatActivity {
 
     DataModelMedicine mMedicine ;
     TextView medcineName;

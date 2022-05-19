@@ -25,7 +25,7 @@ import com.example.medicalhelper.dataModels.DataModelMedicine;
 import com.example.medicalhelper.databinding.FragmentHomeBinding;
 import com.example.medicalhelper.helper.DBHelper;
 import com.example.medicalhelper.Adapterss.MedicineViewAdapter;
-import com.example.medicalhelper.profiles.medicine_Profile;
+import com.example.medicalhelper.profiles.MedicineProfile;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -96,7 +96,7 @@ public class HomeFragment extends Fragment {
         listener = new MedicineViewAdapter.RecycleViewListener() {
             @Override
             public void onClick(View v, int postion) {
-                Intent intent = new Intent(getContext(), medicine_Profile.class);
+                Intent intent = new Intent(getContext(), MedicineProfile.class);
                 intent.putExtra("MedcineInfo", all_meidicine.get(postion));
                 startActivity(intent);
 
@@ -109,6 +109,7 @@ public class HomeFragment extends Fragment {
                 Log.i("Main Delete Medicine", "onLongClick: ++1");
                      mDb.deleteMedicine(all_meidicine.get(position).getId());
                          return false;
+                     //    adapter();
             }
 
         };
@@ -144,10 +145,8 @@ public class HomeFragment extends Fragment {
             @Override
             public boolean onQueryTextSubmit(String s) {
                 all_meidicine = (ArrayList<DataModelMedicine>) mDb.searchMedicine(s);
-
                 adapter();
-
-                 return false;
+                return false;
             }
 
             @SuppressLint("NotifyDataSetChanged")

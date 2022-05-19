@@ -17,25 +17,26 @@
         android:roundIcon="@drawable/care"
         android:supportsRtl="true"
         android:theme="@style/Theme.MedicalHelper">
+
         <activity
             android:name=".AboutApp.AboutApp_updated"
             android:exported="true"
             android:label="@string/title_activity_about_app_updated"
             android:theme="@style/Theme.MedicalHelper.NoActionBar" />
         <activity
-            android:name=".profiles.Doctor_Profile"
+            android:name=".profiles.DoctorProfile"
             android:exported="true" />
         <activity
             android:name=".NewMedicine_Appoinment.Doctor_Appoinment"
             android:exported="true" />
         <activity
-            android:name=".profiles.Profile_tips"
+            android:name=".profiles.TipsProfile"
             android:exported="true" />
         <activity
             android:name=".NewMedicine_Appoinment.NewMedicineRegstier"
             android:exported="true" />
         <activity
-            android:name=".profiles.medicine_Profile"
+            android:name=".profiles.MedicineProfile"
             android:exported="true" />
         <activity
             android:name=".MAIN.NavigationS"
@@ -47,13 +48,17 @@
             android:name=".Reminder.ReminderS"
             android:exported="true" />
         <activity
+
             android:name=".MAIN.MainActivity"
             android:exported="true">
             <intent-filter>
+
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
+
         </activity>
 
         <receiver android:name=".Reminder.AlarmReciver" />

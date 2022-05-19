@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.example.medicalhelper.R;
 import com.example.medicalhelper.dataModels.dataModelDoctors;
 
-public class Doctor_Profile extends AppCompatActivity {
+public class DoctorProfile extends AppCompatActivity {
 
 
     TextView doctor_name;
